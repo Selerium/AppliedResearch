@@ -1,10 +1,12 @@
 import tensorflow as tf
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Conv3D, MaxPooling3D, Flatten, Dense
+from tensorflow.python.keras.models import Sequential
+from tensorflow.python.keras.layers import Conv3D, MaxPooling3D, Flatten, Dense
 
 target_height = 64
 target_width = 64
 frames_per_clip = 30
+num_classes = 0
+channels = 0
 
 model = Sequential()
 model.add(Conv3D(32, kernel_size=(3, 3, 3), activation='relu', input_shape=(frames_per_clip, target_height, target_width, channels)))

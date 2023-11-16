@@ -48,7 +48,7 @@ print("Labels Shape:", labels.shape)
 
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
-from tensorflow.keras.utils import to_categorical
+from tensorflow.python.keras.utils import to_categorical
 
 label_encoder = LabelEncoder()
 encoded_labels = label_encoder.fit_transform(labels)
